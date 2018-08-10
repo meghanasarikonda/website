@@ -72,7 +72,7 @@ class Hero extends React.Component {
           minHeight: '300px'
         }}
       >
-        <Row type="flex" className="hero" align="middle">
+        <Row type="flex" className="hero">
           <Col xs={24} sm={24} md={14} lg={12} xl={12}>
             <TextWrapper>
               <HeroText>About</HeroText>
@@ -90,7 +90,14 @@ class Hero extends React.Component {
               </HeroInfo>
             </TextWrapper>
           </Col>
-          <Col xs={0} sm={0} md={10} lg={12} xl={12}>
+          <Col
+            xs={0}
+            sm={0}
+            md={10}
+            lg={12}
+            xl={12}
+            style={{ display: 'grid', alignItems: 'end' }}
+          >
             <HeroArt>
               <img alt="about MARKET" src={header} />
             </HeroArt>
