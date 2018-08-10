@@ -60,7 +60,6 @@ export const HeroText = styled.h1`
   color: #f0f0f0;
   font-size: 50px;
   font-weight: 700;
-  margin: 150px 50px 0 50px;
   line-height: 1.2;
 
   @media ${device.mobileS} {
@@ -80,6 +79,7 @@ export const HeroText = styled.h1`
 
   @media ${device.laptop} {
     font-size: 50px;
+    margin: 150px 50px 0 50px;
   }
 `;
 
@@ -91,7 +91,7 @@ class Hero extends React.Component<{ text?: string }, {}> {
   render() {
     return (
       <section style={{ background: '#181E26', minHeight: '300px' }}>
-        <Row type="flex" className="hero" align="middle">
+        <Row type="flex" className="hero">
           <Col xs={24} md={12} lg={10} style={{ zIndex: 1 }}>
             <HeroText>
               {this.props.text ||
