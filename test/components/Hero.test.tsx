@@ -22,7 +22,6 @@ describe('<Hero />', () => {
     expect(rowComponent).to.have.length(1);
     expect(rowComponentProps.type).to.equal('flex');
     expect(rowComponentProps.className).to.equal('hero');
-    expect(rowComponentProps.align).to.equal('middle');
   });
 
   it('renders two Col components except for mobile', () => {

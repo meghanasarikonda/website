@@ -21,7 +21,6 @@ describe('<Hero />', () => {
     expect(rowComponent).to.have.length(1);
     expect(rowComponentProps.type).to.equal('flex');
     expect(rowComponentProps.className).to.equal('hero');
-    expect(rowComponentProps.align).to.equal('bottom');
   });
 
   it('renders two Col components', () => {
@@ -32,6 +31,16 @@ describe('<Hero />', () => {
     expect(colComponents).to.have.length(2);
     expect(firstColComponentProps.xs).to.equal(24);
     expect(secondColComponentProps.md).to.equal(10);
+  });
+
+  it('renders secondcolumn with alignitems end', () => {
+    const component = shallow(<Hero />);
+    const colComponents = component.find(Col);
+    const secondColComponentProps = colComponents.at(1).props();
+    expect(secondColComponentProps.style).to.deep.equal({
+      display: 'grid',
+      alignItems: 'end'
+    });
   });
 
   it('renders HeroText with title text', () => {
